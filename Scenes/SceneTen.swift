@@ -25,7 +25,8 @@ public class SceneTen: SKScene{
             
             if node.name == "plpaneBtn" {
                 FeedBackTouch.hapticH.impactOccurred()
-                //self.removeAllChildren()
+                let transition = SKTransition.fade(withDuration: 5)
+                self.view?.presentScene(SceneElev(), transition: transition)
             }
         }
     }
