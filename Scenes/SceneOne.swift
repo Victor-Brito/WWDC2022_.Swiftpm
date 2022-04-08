@@ -19,7 +19,7 @@ public class SceneOne: SKScene, btnActionDelegate {
         self.addChild(son)
         self.addChild(dad)
         
-        delay(7.0){
+        delay(8.0){
             self.addButtonPosition()
         }
     }
