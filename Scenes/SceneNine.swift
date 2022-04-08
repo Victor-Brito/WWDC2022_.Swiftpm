@@ -1,8 +1,8 @@
 import Foundation
 import SpriteKit
 
-public class SceneNine: SKScene {
-    
+public class SceneNine: SKScene, btnActionDelegate {
+
     let btnsprite = ButnAction()
     let node = PaperNodeGeneric(imgName: "Interactive8")
     let paperAnim = AnimPaperFoldGeric(imgTexture: "PaperPartEigth0", imgName: "PaperPartEigth", firstFrame: 0, lastFrame: 2)
@@ -14,7 +14,7 @@ public class SceneNine: SKScene {
     }
     
     public override func didMove(to view: SKView) {
-        btnsprite.name = "BtnAction"
+        btnsprite.delegate = self
         self.addChild(node)
         self.addChild(son)
         self.addChild(dad)
@@ -24,28 +24,23 @@ public class SceneNine: SKScene {
     }
     
     public override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-        //Button play interaction to change scene
-        if let touch = touches.first {
-            let pos = touch.location(in: self)
-            let node = self.atPoint(pos)
-            
-            if node.name == "BtnAction" {
-                FeedBackTouch.hapticM.impactOccurred()
-                self.removeAllChildren()
-                addChild(paperAnim)
-                paperAnim.paperFoldAnim()
-                delay(1.5){
-                    self.removeAllChildren()
-                    self.view?.presentScene(SceneTen())
-                }
-            }
-        }
     }
     
     func addButtonPosition() {
         addChild(btnsprite)
         btnsprite.pulseAnimation()
         btnsprite.position = CGPoint(x: 200, y: 120)
+    }
+    
+    func BtnAction() {
+        FeedBackTouch.hapticM.impactOccurred()
+        self.removeAllChildren()
+        addChild(paperAnim)
+        paperAnim.paperFoldAnim()
+        delay(1.5){
+            self.removeAllChildren()
+            self.view?.presentScene(SceneTen())
+        }
     }
     
     required init?(coder aDecoder: NSCoder) {

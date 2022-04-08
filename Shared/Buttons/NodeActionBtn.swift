@@ -6,15 +6,21 @@ import SpriteKit
 public class ButnAction: SKSpriteNode{
     
     public var btnframes: [SKTexture] = []
+    weak var delegate: btnActionDelegate?
     
     public init (){
         let playBtnTexture = SKTexture(imageNamed: "ButtonAction0")
         super.init(texture: playBtnTexture, color: .clear, size: playBtnTexture.size())
         self.anchorPoint = CGPoint(x: 0.5, y: 0.5)
+        self.isUserInteractionEnabled = true
         
         for i in 0...30  {
             self.btnframes.append(SKTexture(imageNamed: "ButtonAction\(i)"))
         }
+    }
+    
+    public override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        delegate?.BtnAction()
     }
     
     /// <#Description#>
