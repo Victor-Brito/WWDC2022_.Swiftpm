@@ -2,7 +2,7 @@ import Foundation
 import SpriteKit
 
 
-/// <#Description#>
+/// This class creates the button node in airplane format
 public class NodePlaneBtn: SKSpriteNode{
     
     public var btnPlaneFrames: [SKTexture] = []
@@ -18,7 +18,7 @@ public class NodePlaneBtn: SKSpriteNode{
         }
     }
     
-    /// <#Description#>
+    /// Here the function responsible for calling the pulsar animation is created
     public func pulseAnimation(){
         let animationPulse = SKAction.animate(with: btnPlaneFrames, timePerFrame: 0.03, resize: true, restore: true)
         self.run(SKAction.repeatForever(animationPulse))

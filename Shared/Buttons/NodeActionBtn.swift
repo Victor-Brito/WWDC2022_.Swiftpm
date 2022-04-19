@@ -2,7 +2,7 @@ import Foundation
 import SpriteKit
 
 
-/// <#Description#>
+/// This class is responsible for creating the button that performs actions in the scene
 public class ButnAction: SKSpriteNode{
     
     public var btnframes: [SKTexture] = []
@@ -23,7 +23,7 @@ public class ButnAction: SKSpriteNode{
         delegate?.BtnAction()
     }
     
-    /// <#Description#>
+    /// Here the function responsible for calling the pulsar animation is created
     public func pulseAnimation(){
         let animationPulse = SKAction.animate(with: btnframes, timePerFrame: 0.04, resize: true, restore: true)
         self.run(SKAction.repeatForever(animationPulse))

@@ -23,15 +23,14 @@ public class SceneThree: SKScene, btnActionDelegate {
         }
     }
     
-    public override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-    }
-    
+    /// Method to add button position in my scene along with its animation
     func addButtonPosition() {
         addChild(btnsprite)
         btnsprite.pulseAnimation()
         btnsprite.position = CGPoint(x: 450, y: 395)
     }
     
+    /// Method created within the "btnAction Delegate" protocol to implement the node's touchesBegan
     func BtnAction() {
         FeedBackTouch.hapticM.impactOccurred()
         self.removeAllChildren()

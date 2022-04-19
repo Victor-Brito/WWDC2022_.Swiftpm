@@ -1,6 +1,7 @@
 import Foundation
 import SpriteKit
 
+/// This class is responsible for the generic creation of all nodes with the same size and anchorpoint
  public class PaperNodeGeneric: SKSpriteNode {
     
    public init (imgName: String){

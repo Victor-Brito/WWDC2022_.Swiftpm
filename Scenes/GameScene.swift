@@ -15,7 +15,6 @@ public class GameScene: SKScene {
     }
     
     public override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-        //Button play interaction to change scene
         if let touch = touches.first {
             let pos = touch.location(in: self)
             let node = self.atPoint(pos)

@@ -18,7 +18,6 @@ public class SceneTen: SKScene{
     }
     
     public override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-        //Button play interaction to change scene
         if let touch = touches.first {
             let pos = touch.location(in: self)
             let node = self.atPoint(pos)
@@ -31,6 +30,7 @@ public class SceneTen: SKScene{
         }
     }
     
+    /// Method responsible for adopting the position of the button in the shape of an airplane
     func addBtnPlane() {
         addChild(planeBtn)
         planeBtn.pulseAnimation()

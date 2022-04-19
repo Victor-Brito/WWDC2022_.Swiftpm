@@ -1,13 +1,12 @@
 import Foundation
 import SpriteKit
 
-/// <#Description#>
+/// This class creates the animation responsible for the storytelling interaction that comes in from the left
 public class StorytellingL: SKSpriteNode {
     
-    /// <#Description#>
     /// - Parameters:
-    ///   - imgName: <#imgName description#>
-    ///   - animationTime: <#animationTime description#>
+    ///   - imgName: Here we load the storytelling card that enters from the left
+    ///   - animationTime: Here we select the duration time of each card on the screen
     public init (imgName: String, animationTime: Int){
       let nodeL = SKTexture(imageNamed: imgName)
       super.init(texture: nodeL, color: .clear, size: Constants.actionSize)
@@ -35,13 +34,12 @@ public class StorytellingL: SKSpriteNode {
 }
 
 
-/// <#Description#>
+/// This class creates the animation responsible for the storytelling interaction that comes in from the right
 public class StorytellingR: SKSpriteNode {
     
-    /// <#Description#>
     /// - Parameters:
-    ///   - imgName: <#imgName description#>
-    ///   - animationTime: <#animationTime description#>
+    ///   - imgName: Here we load the storytelling card that enters from the right
+    ///   - animationTime: Here we select the duration time of each card on the screen
     public init (imgName: String, animationTime: Int){
       let nodeL = SKTexture(imageNamed: imgName)
       super.init(texture: nodeL, color: .clear, size: Constants.actionSize)

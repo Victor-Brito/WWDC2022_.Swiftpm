@@ -1,7 +1,7 @@
 import Foundation
 import SpriteKit
 
-/// <#Description#>
+/// This class creates the button responsible for starting the scene
 public class PlayBtn: SKSpriteNode {
     
     public var playbtnframes: [SKTexture] = []
@@ -18,7 +18,7 @@ public class PlayBtn: SKSpriteNode {
         
     }
     
-    /// <#Description#>
+    /// Function responsible for creating the play button pulsation
     public func pulsePlayBtnAnimation(){
         let animationPulse = SKAction.animate(with: playbtnframes, timePerFrame: 0.2, resize: true, restore: true)
         self.run(SKAction.repeatForever(animationPulse))
