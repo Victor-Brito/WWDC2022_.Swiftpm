@@ -1,10 +1,3 @@
-//
-//  File.swift
-//  
-//
-//  Created by Victor Brito on 08/04/22.
-//
-
 import Foundation
 import SpriteKit
 public class SceneElev: SKScene {

@@ -33,7 +33,6 @@ public class StorytellingL: SKSpriteNode {
    }
 }
 
-
 /// This class creates the animation responsible for the storytelling interaction that comes in from the right
 public class StorytellingR: SKSpriteNode {
     

@@ -15,7 +15,6 @@ public class PlayBtn: SKSpriteNode {
                 for i in 0...6  {
                     self.playbtnframes.append(SKTexture(imageNamed: "PlayBtn\(i)"))
                 }
-        
     }
     
     /// Function responsible for creating the play button pulsation
