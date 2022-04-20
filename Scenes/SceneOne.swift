@@ -5,8 +5,8 @@ public class SceneOne: SKScene, btnActionDelegate {
 
     let paperAnim = AnimPaperFoldGeric(imgTexture: "PaperPartOne0", imgName: "PaperPartOne", firstFrame: 0, lastFrame: 1)
     let node = PaperNodeGeneric(imgName: "Interactive0")
-    let son = StorytellingL(imgName: "son01", animationTime: 6)
-    let dad = StorytellingR(imgName: "dad01", animationTime: 6)
+    let son = StorytellingL(imgName: "son01", animationTime: 13)
+    let dad = StorytellingR(imgName: "dad01", animationTime: 13)
     let btnsprite = ButnAction()
     
     public override init(){
@@ -19,7 +19,7 @@ public class SceneOne: SKScene, btnActionDelegate {
         self.addChild(son)
         self.addChild(dad)
         
-        delay(8.0){
+        delay(15.0){
             self.addButtonPosition()
         }
     }
