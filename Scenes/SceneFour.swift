@@ -26,7 +26,6 @@ public class SceneFour: SKScene, btnActionDelegate {
     
     /// Method created within the "btnAction Delegate" protocol to implement the node's touchesBegan
     func BtnAction() {
-        FeedBackTouch.hapticM.impactOccurred()
         self.removeAllChildren()
         addChild(paperAnim)
         paperAnim.paperFoldAnim()

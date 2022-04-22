@@ -23,7 +23,6 @@ public class SceneTen: SKScene{
             let node = self.atPoint(pos)
             
             if node.name == "plpaneBtn" {
-                FeedBackTouch.hapticH.impactOccurred()
                 let transition = SKTransition.fade(withDuration: 5)
                 self.view?.presentScene(SceneElev(), transition: transition)
             }

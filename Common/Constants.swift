@@ -18,11 +18,3 @@ public struct Constants {
     public static let anchorPoint = CGPoint(x: 0, y: 0)
     public static var moveConstant: CGFloat = 50
 }
-
-// ------ STRUCT OF HAPTICS MODES  ------ //
-/// In this structure it is possible to select the response feedback based on the haptic
-public struct FeedBackTouch {
-    public static let hapticH = UIImpactFeedbackGenerator(style: .heavy)
-    public static let hapticM = UIImpactFeedbackGenerator(style: .medium)
-    public static let hapticL = UIImpactFeedbackGenerator(style: .light)
-}

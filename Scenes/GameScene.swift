@@ -20,7 +20,6 @@ public class GameScene: SKScene {
             let node = self.atPoint(pos)
             
             if node.name == "PlayButton" {
-                FeedBackTouch.hapticH.impactOccurred()
                 let transition = SKTransition.fade(withDuration: 1)
                 self.view?.presentScene(SceneOne(), transition: transition)
             }
